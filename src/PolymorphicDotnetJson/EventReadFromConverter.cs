@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 
 namespace PolymorphicDotnetJson;
 
-public class EventConverter : JsonConverter<Event>
+public class EventReadFromConverter : JsonConverter<Event>
 {
     public static List<Type> ConvertableTypes { get; } = new()
     {

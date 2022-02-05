@@ -9,6 +9,6 @@ public abstract class EventStream
     
     private DateTime EventCreatedUtc { get; init; }
     
-    [JsonConverter(typeof(EventConverter))]
+    [JsonConverter(typeof(EventReadFromConverter))]
     public Event Payload { get; set; }
 }

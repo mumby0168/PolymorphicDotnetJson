@@ -5,10 +5,7 @@ using Xunit;
 
 namespace PolymorphicDotnetJson.Tests;
 
-public class OrderStream : EventStream
-{
-    
-}
+
 
 public class UnitTest1
 {
