@@ -2,6 +2,16 @@ using Newtonsoft.Json;
 
 namespace PolymorphicDotnetJson;
 
+public abstract class EventStreamDtoBased
+{
+    public virtual string GetEventType() =>
+        GetType().Name;
+    
+    private DateTime EventCreatedUtc { get; init; }
+    
+    public EventDto EventInstance { get; set; }
+}
+
 public abstract class EventStream
 {
     public virtual string GetEventType() =>
@@ -9,6 +19,5 @@ public abstract class EventStream
     
     private DateTime EventCreatedUtc { get; init; }
     
-    [JsonConverter(typeof(EventReadFromConverter))]
     public Event Payload { get; set; }
 }

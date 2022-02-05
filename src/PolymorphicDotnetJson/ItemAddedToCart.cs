@@ -7,4 +7,9 @@ public class ItemAddedToCart : Event
     public string ItemId { get; set; } = default!;
 
     public double Price { get; set; } = 10;
+
+    public ItemAddedToCart()
+    {
+        EventName = "ItemAddedToCart";
+    }
 }

@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using PolymorphicDotnetJson.SystemText;
 
 namespace PolymorphicDotnetJson;
 
@@ -10,6 +11,7 @@ public abstract class Event
         EventName = GetType().Name;
 
     [JsonProperty(Order = -5, PropertyName = "eventName")]
-    [JsonPropertyOrder(-5)]
+    [JsonPropertyOrder(0)]
+    [JsonPropertyName("__eventName")]
     protected string EventName { get; set; }
 }
